@@ -18,7 +18,7 @@ method get-gender-ratios(:$species, :$form) {
     return %ratios;
 }
 
-method get-height (:$species, :$form) {
+method get-height(:$species, :$form) {
     my $query = dbh.prepare(qq:to/STATEMENT/);
            SELECT height FROM pokeapi_pokedex WHERE species = ?;
         STATEMENT
@@ -31,7 +31,7 @@ method get-height (:$species, :$form) {
     return %height;
 }
 
-method get-weight (:$species, :$form) {
+method get-weight(:$species, :$form) {
     my $query = dbh.prepare(qq:to/STATEMENT/);
            SELECT weight FROM pokeapi_pokedex WHERE species = ?;
         STATEMENT
