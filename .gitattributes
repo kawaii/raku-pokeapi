@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.t linguist-language=perl6
+.gitattributes export-ignore
+.gitignore export-ignore
