@@ -19,14 +19,14 @@ $$
 $$,
 $$
 {
-    "default": [ 2.0 ],
-    "alolan": [ 10.9 ]
+    "default": 2.0,
+    "alolan": 10.9
 }
 $$,
 $$
 {
-    "default": [ 120.0 ],
-    "alolan": [ 415.6 ]
+    "default": 120.0,
+    "alolan": 415.6
 }
 $$,
 45,

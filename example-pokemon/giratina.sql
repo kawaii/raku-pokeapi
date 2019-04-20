@@ -8,14 +8,14 @@ NULL,
 NULL,
 $$
 {
-    "altered": [ 4.5 ],
-    "origin": [ 6.9 ]
+    "altered": 4.5,
+    "origin": 6.9
 }
 $$,
 $$
 {
-    "altered": [ 750.0 ],
-    "origin": [ 650.0 ]
+    "altered": 750.0,
+    "origin": 650.0
 }
 $$,
 3,
