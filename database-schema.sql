@@ -1,4 +1,4 @@
--- version 0.1 of the p6-pokeapi database schema
+-- version 0.2 of the p6-pokeapi database schema
 -- very much subject to change during development
 
 CREATE TABLE IF NOT EXISTS pokeapi_pokedex (
@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS pokeapi_pokedex (
     forms jsonb,
     types jsonb,
     "gender-ratio" jsonb,
-    evolution jsonb,
     height jsonb,
     weight jsonb,
     "mega-stone" jsonb,
@@ -23,6 +22,15 @@ CREATE TABLE IF NOT EXISTS pokeapi_pokedex (
     "egg-groups" jsonb,
     "hatch-time" integer,
     PRIMARY KEY (id, species)
+);
+
+CREATE TABLE IF NOT EXISTS pokeapi_evolutions (
+    pokemon text,
+    evolution text,
+    criteria jsonb,
+    FOREIGN KEY (pokemon) REFERENCES pokeapi_pokedex(species),
+    FOREIGN KEY (evolution) REFERENCES pokeapi_pokedex(species),
+    PRIMARY KEY (pokemon, evolution)
 );
 
 CREATE TABLE IF NOT EXISTS pokeapi_moves (
