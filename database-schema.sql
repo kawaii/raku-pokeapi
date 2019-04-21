@@ -3,7 +3,7 @@
 
 CREATE TABLE IF NOT EXISTS pokeapi_pokedex (
     id serial,
-    species text,
+    species text UNIQUE,
     category text,
     forms jsonb,
     types jsonb,
