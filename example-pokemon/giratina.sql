@@ -5,7 +5,6 @@ $$
 }
 $$,
 NULL,
-NULL,
 $$
 {
     "altered": 4.5,
@@ -18,6 +17,7 @@ $$
     "origin": 650.0
 }
 $$,
+NULL,
 3,
 $$
 {
@@ -55,5 +55,13 @@ $$
     "altered": [ "Telepathy" ]
 }
 $$,
-'[ "Undiscovered" ]'
+'Slow',
+0,
+$$
+{
+    "Sinnoh": 210
+}
+$$,
+'[ "Undiscovered" ]',
+30968
 );
