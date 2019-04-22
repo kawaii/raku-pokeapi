@@ -136,4 +136,4 @@ $$,
 5268
 );
 
-INSET INTO pokeapi_evolutions VALUES ('Exeggcute', 'Exeggutor', '{"stone": "Leaf Stone"}');
+INSERT INTO pokeapi_evolutions VALUES ('Exeggcute', 'Exeggutor', '{"stone": "Leaf Stone"}');
