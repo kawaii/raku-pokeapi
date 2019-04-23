@@ -16,14 +16,20 @@ method get-weight(:$species, :$form) returns Hash { ... }
 method values-or-defaults(%hash, $key) {
     return %hash if not %hash;
 
-    my %output = %hash<default>;
+    multi merge(%a, %b) {
+        return %(|(%a), |(%b))
+    }
+    multi merge ($a, $b) {
+        return $b // $a
+    }
+    my $output = %hash<default>;
 
-    if %hash{$key} -> %overrides {
-        %output = |(%output), |(%overrides)
+    if %hash{$key} -> $val {
+        $output = merge($output, $val);
     }
 
-    if not %output {
+    if not $output {
         # throw exception
     }
-    return %output;
+    return $output;
 }

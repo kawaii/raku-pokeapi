@@ -17,14 +17,13 @@ method select-gender(:$species, :$form = 'default') {
 }
 
 method select-height(:$species, :$form = 'default') {
-    my %height = $.data-source.get-height(:$species, :$form);
-    return %height;
-    #my %growth = %heights * (0.9..1.1).rand;
-    #say %growth;
+    my $height = $.data-source.get-height(:$species, :$form);
+    return $height * (0.9..1.1).rand;
 }
 
 method select-weight(:$species, :$form = 'default') {
-
+    my $weight = $.data-source.get-weight(:$species, :$form);
+    return $weight * (0.9..1.1).rand;
 }
 
 method generate-ivs {

@@ -26,9 +26,9 @@ method get-height(:$species, :$form) {
     $query.execute($species);
 
     my %heights = from-json($query.row);
-    my %height = self.values-or-defaults(%heights, $form);
 
-    return %height;
+    my $height = self.values-or-defaults(%heights, $form);
+    return $height;
 }
 
 method get-weight(:$species, :$form) {
@@ -39,7 +39,7 @@ method get-weight(:$species, :$form) {
     $query.execute($species);
 
     my %weights = from-json($query.row);
-    my %weight = self.values-or-defaults(%weights, $form);
 
-    return %weight;
+    my $weight = self.values-or-defaults(%weights, $form);
+    return $weight;
 }
