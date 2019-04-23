@@ -4,6 +4,8 @@ unit role Pokeapi::Role::DataSource;
 
 #| Returns a hash containing arbitrary keys (usually Male and Female) and their respective ratios.
 #| The implementation must return default values if possible. Returning an undefined value is acceptable.
+method get-forms(:$species) returns Array { ... }
+
 method get-gender-ratios(:$species, :$form) returns Hash { ... }
 
 method get-height(:$species, :$form) returns Hash { ... }

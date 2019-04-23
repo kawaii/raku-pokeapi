@@ -5,6 +5,17 @@ use Pokeapi::Controller::Database;
 
 use JSON::Fast;
 
+method get-forms(:$species) {
+    my $query = dbh.prepare(qq:to/STATEMENT/);
+           SELECT "forms" FROM pokeapi_pokedex WHERE species = ?;
+        STATEMENT
+
+    $query.execute($species);
+
+    my @forms = from-json($query.row);
+    return @forms;
+}
+
 method get-gender-ratios(:$species, :$form) {
     my $query = dbh.prepare(qq:to/STATEMENT/);
            SELECT "gender-ratio" FROM pokeapi_pokedex WHERE species = ?;

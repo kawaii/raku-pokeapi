@@ -11,6 +11,11 @@ method select-nature {
     return NATURE.pick;
 }
 
+method select-form(:$species) {
+    my @forms = $.data-source.get-forms(:$species);
+    return @forms;
+}
+
 method select-gender(:$species, :$form = 'default') {
     my %ratios = $.data-source.get-gender-ratios(:$species, :$form);
     return %ratios.Mix.roll;
