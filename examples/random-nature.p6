@@ -7,5 +7,3 @@ my $generator = Pokeapi::Pokemon::Generator.new(:$data-source);
 for 0 .. 50 {
     say my $nature = $generator.select-nature;
 }
-
-
