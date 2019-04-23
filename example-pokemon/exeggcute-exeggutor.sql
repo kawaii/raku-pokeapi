@@ -136,4 +136,5 @@ $$,
 5268
 );
 
-INSERT INTO pokeapi_evolutions VALUES ('Exeggcute', 'Exeggutor', '{"stone": "Leaf Stone"}');
+INSERT INTO pokeapi_evolutions VALUES ('Exeggcute', 'Exeggutor', 'default', '{"stone": "Leaf Stone"}');
+INSERT INTO pokeapi_evolutions VALUES ('Exeggcute', 'Exeggutor', 'alolan', '{"stone": "Leaf Stone", "region": "Alola"}');
