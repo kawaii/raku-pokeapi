@@ -12,7 +12,7 @@ method get-forms(:$species) {
 
     $query.execute($species);
 
-    my @forms = from-json($query.row);
+    my @forms = from-json($query.row).list;
     return @forms;
 }
 
