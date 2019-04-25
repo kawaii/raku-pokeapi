@@ -31,12 +31,12 @@ $$,
 $$
 {
     "default": {
-        "HP": 60,
-        "ATTACK": 40,
-        "DEFENCE": 80,
-        "SPECIAL ATTACK": 60,
-        "SPECIAL DEFENCE": 45,
-        "SPEED": 40
+        "hp": 60,
+        "attack": 40,
+        "defence": 80,
+        "special-attack": 60,
+        "special-defence": 45,
+        "speed": 40
     }
 }
 $$,
@@ -96,21 +96,21 @@ $$
 $$,
 $$
 {
-    "default": {
-        "HP": 95,
-        "ATTACK": 95,
-        "DEFENCE": 85,
-        "SPECIAL ATTACK": 125,
-        "SPECIAL DEFENCE": 75,
-        "SPEED": 55
+   "default": {
+        "hp": 95,
+        "attack": 95,
+        "defence": 85,
+        "special-attack": 125,
+        "special-defence": 75,
+        "speed": 55
     },
     "alolan": {
-        "HP": 95,
-        "ATTACK": 105,
-        "DEFENCE": 85,
-        "SPECIAL ATTACK": 125,
-        "SPECIAL DEFENCE": 75,
-        "SPEED": 45
+        "hp": 95,
+        "attack": 105,
+        "defence": 85,
+        "special-attack": 125,
+        "special-defence": 75,
+        "speed": 45
     }
 }
 $$,

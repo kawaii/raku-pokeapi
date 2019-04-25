@@ -27,20 +27,20 @@ $$,
 $$
 {
     "altered": {
-        "HP": 150,
-        "ATTACK": 100,
-        "DEFENCE": 120,
-        "SPECIAL ATTACK": 100,
-        "SPECIAL DEFENCE": 120,
-        "SPEED": 90
+        "hp": 150,
+        "attack": 100,
+        "defence": 120,
+        "special-attack": 100,
+        "special-defence": 120,
+        "speed": 90
     },
     "origin": {
-        "HP": 150,
-        "ATTACK": 120,
-        "DEFENCE": 100,
-        "SPECIAL ATTACK": 120,
-        "SPECIAL DEFENCE": 100,
-        "SPEED": 90
+        "hp": 150,
+        "attack": 120,
+        "defence": 100,
+        "special-attack": 120,
+        "special-defence": 100,
+        "speed": 90
     }
 }
 $$,

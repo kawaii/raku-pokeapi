@@ -30,52 +30,52 @@ $$,
 $$
 {
     "default": {
-        "HP": 50,
-        "ATTACK": 50,
-        "DEFENCE": 77,
-        "SPECIAL ATTACK": 95,
-        "SPECIAL DEFENCE": 77,
-        "SPEED": 91
+        "hp": 50,
+        "attack": 50,
+        "defence": 77,
+        "special-attack": 95,
+        "special-defence": 77,
+        "speed": 91
     },
     "fan": {
-        "HP": 50,
-        "ATTACK": 65,
-        "DEFENCE": 107,
-        "SPECIAL ATTACK": 105,
-        "SPECIAL DEFENCE": 107,
-        "SPEED": 86
+        "hp": 50,
+        "attack": 65,
+        "defence": 107,
+        "special-attack": 105,
+        "special-defence": 107,
+        "speed": 86
     },
     "frost": {
-        "HP": 50,
-        "ATTACK": 65,
-        "DEFENCE": 107,
-        "SPECIAL ATTACK": 105,
-        "SPECIAL DEFENCE": 107,
-        "SPEED": 86
+        "hp": 50,
+        "attack": 65,
+        "defence": 107,
+        "special-attack": 105,
+        "special-defence": 107,
+        "speed": 86
     },
     "heat": {
-        "HP": 50,
-        "ATTACK": 65,
-        "DEFENCE": 107,
-        "SPECIAL ATTACK": 105,
-        "SPECIAL DEFENCE": 107,
-        "SPEED": 86
+        "hp": 50,
+        "attack": 65,
+        "defence": 107,
+        "special-attack": 105,
+        "special-defence": 107,
+        "speed": 86
     },
     "mow": {
-        "HP": 50,
-        "ATTACK": 65,
-        "DEFENCE": 107,
-        "SPECIAL ATTACK": 105,
-        "SPECIAL DEFENCE": 107,
-        "SPEED": 86
+        "hp": 50,
+        "attack": 65,
+        "defence": 107,
+        "special-attack": 105,
+        "special-defence": 107,
+        "speed": 86
     },
     "wash": {
-        "HP": 50,
-        "ATTACK": 65,
-        "DEFENCE": 107,
-        "SPECIAL ATTACK": 105,
-        "SPECIAL DEFENCE": 107,
-        "SPEED": 86
+        "hp": 50,
+        "attack": 65,
+        "defence": 107,
+        "special-attack": 105,
+        "special-defence": 107,
+        "speed": 86
     }
 }
 $$,
