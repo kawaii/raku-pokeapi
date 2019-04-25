@@ -64,8 +64,8 @@ method generate-statistics(:$species, :$form = 'default') {
     my $inc = $nature.value<increased-stat>;
     my $dec = $nature.value<decreased-stat>;
 
-    %stats{$inc}.round *= 1.1 if $inc;
-    %stats{$dec}.round *= 0.9 if $dec;
+    %stats{$inc} = (%stats{$inc} * 1.1).round if $inc;
+    %stats{$dec} = (%stats{$dec} * 0.9).round if $dec;
 
     say "After nature modification the final statistics are {%stats.gist}";
 
