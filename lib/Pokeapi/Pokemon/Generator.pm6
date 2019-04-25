@@ -58,8 +58,8 @@ method generate-statistics(:$species, :$form = 'default', :$nature) {
     my $inc = $nature.value<increased-stat>;
     my $dec = $nature.value<decreased-stat>;
 
-    %stats{$inc} = (%stats{$inc} * 1.1).round if $inc;
-    %stats{$dec} = (%stats{$dec} * 0.9).round if $dec;
+    %stats{$inc} = (%stats{$inc} * 1.1).round with $inc;
+    %stats{$dec} = (%stats{$dec} * 0.9).round with $dec;
 
     return %stats;
 }
