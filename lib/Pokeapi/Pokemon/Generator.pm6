@@ -4,16 +4,19 @@ use Pokeapi::Role::DataSource;
 
 has Pokeapi::Role::DataSource $.data-source is required;
 
-method select-nature {
-    enum NATURE ( <Hardy Lonely Brave Adamant Naughty Bold Docile Relaxed Impish Lax Timid Hasty Serious
-                   Jolly Naive Modest Mild Quiet Bashful Rash Calm Gentle Sassy Careful Quirky> );
-
-    return NATURE.pick;
+method select-species {
+    my @species = $.data-source.get-species;
+    return @species.pick;
 }
 
-method select-form(:$species) {
+method select-form(:$species) returns Str {
     my @forms = $.data-source.get-forms(:$species);
-    return @forms;
+    return @forms.pick;
+}
+
+method select-nature returns Pair {
+    my %natures = $.data-source.get-natures;
+    return %natures.pairs.pick;
 }
 
 method select-gender(:$species, :$form = 'default') {
@@ -46,6 +49,27 @@ method generate-ivs {
     ;
 
     return %ivs;
+}
+
+method generate-statistics(:$species, :$form = 'default') {
+    my $nature = self.select-nature;
+
+    my %stats = self.get-base-stats(:$species, :$form);
+    say "Base statistics are {%stats.gist}!";
+
+    %stats »+=« self.generate-ivs;
+
+    say "Base statistics + IVs are {%stats.gist}.";
+
+    my $inc = $nature.value<increased-stat>;
+    my $dec = $nature.value<decreased-stat>;
+
+    %stats{$inc}.round *= 1.1 if $inc;
+    %stats{$dec}.round *= 0.9 if $dec;
+
+    say "After nature modification the final statistics are {%stats.gist}";
+
+    return %stats;
 }
 
 method shiny-check {

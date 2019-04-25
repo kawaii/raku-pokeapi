@@ -2,9 +2,46 @@ use Pokeapi::Role::DataSource;
 
 unit class Pokeapi::DataSource::Test does Pokeapi::Role::DataSource;
 
+method get-species {
+    my @species = <Bulbasaur Charmander Squirtle Pikachu>;
+    return @species;
+}
+
 method get-forms(:$species) {
     my @forms = <default alolan mega altered>;
     return @forms;
+}
+
+method get-natures {
+    # Everything is either all null or all populated so 2 examples suffices.
+    my %natures =
+        Hardy => {
+            increased-stat  => Nil,
+            decreased-stat  => Nil,
+            favorite-flavor => Nil,
+            disliked-flavor => Nil,
+        },
+        Lonely => {
+            increased-stat  => 'attack',
+            decreased-stat  => 'defence',
+            favorite-flavor => 'Spicy',
+            disliked-flavor => 'Sour',
+        };
+
+    return %natures;
+}
+
+
+method get-base-stats(:$species, :$form) {
+    my %base-stats = hp => 50,
+            attack => 50,
+            defence => 50,
+            special-attack => 50,
+            special-defence => 50,
+            speed => 50,
+    ;
+
+    return %base-stats;
 }
 
 method get-gender-ratios(:$species, :$form) {
@@ -52,8 +89,4 @@ method get-weight(:$species, :$form) {
 
     my $weight = self.values-or-defaults(%weights, $form);
     return $weight;
-}
-
-method get-base-stats(:$species, :$form) {
-
 }
