@@ -51,23 +51,15 @@ method generate-ivs {
     return %ivs;
 }
 
-method generate-statistics(:$species, :$form = 'default') {
-    my $nature = self.select-nature;
-
+method generate-statistics(:$species, :$form = 'default', :$nature) {
     my %stats = self.get-base-stats(:$species, :$form);
-    say "Base statistics are {%stats.gist}!";
-
     %stats »+=« self.generate-ivs;
-
-    say "Base statistics + IVs are {%stats.gist}.";
 
     my $inc = $nature.value<increased-stat>;
     my $dec = $nature.value<decreased-stat>;
 
     %stats{$inc} = (%stats{$inc} * 1.1).round if $inc;
     %stats{$dec} = (%stats{$dec} * 0.9).round if $dec;
-
-    say "After nature modification the final statistics are {%stats.gist}";
 
     return %stats;
 }

@@ -12,7 +12,7 @@ method get-species {
 
     $query.execute;
 
-    my @species = from-json($query.row).list;
+    my @species = $query.allrows.flat;
     return @species;
 }
 
@@ -29,12 +29,13 @@ method get-forms(:$species) {
 
 method get-natures {
     my $query = dbh.prepare(qq:to/STATEMENT/);
-               SELECT * FROM pokeapi_natures;
+           SELECT * FROM pokeapi_natures;
         STATEMENT
 
     $query.execute;
 
-    my %natures = $query.allrows;
+    my @natures = $query.allrows(:array-of-hash);
+    my %natures = @natures.map: { $_<nature> => $_ };
     return %natures;
 }
 

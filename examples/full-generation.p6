@@ -1,10 +1,9 @@
 use Pokeapi::Pokemon::Generator;
-use Pokeapi::DataSource::Test;
+use Pokeapi::DataSource::DBI;
 
-my $data-source = Pokeapi::DataSource::Test.new;
+my $data-source = Pokeapi::DataSource::DBI.new;
 my $generator = Pokeapi::Pokemon::Generator.new(:$data-source);
 
-my $species = $generator.select-species;
-say "Chosen species is {$species}!";
-
-my $stats = $generator.generate-statistics(:$species);
+say my $species = $generator.select-species;
+say my $nature = $generator.select-nature;
+say my $stats = $generator.generate-statistics(:$species, :$nature);
