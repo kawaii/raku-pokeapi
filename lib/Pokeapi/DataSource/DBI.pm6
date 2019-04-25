@@ -54,3 +54,16 @@ method get-weight(:$species, :$form) {
     my $weight = self.values-or-defaults(%weights, $form);
     return $weight;
 }
+
+method get-base-stats(:$species, :$form) {
+    my $query = dbh.prepare(qq:to/STATEMENT/);
+           SELECT "base-statistics" FROM pokeapi_pokedex WHERE species = ?;
+        STATEMENT
+
+    $query.execute($species);
+
+    my %base-stats = from-json($query.row);
+    %base-stats = self.values-or-defaults(%base-stats, $form);
+
+    return %base-stats;
+}

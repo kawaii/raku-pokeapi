@@ -6,6 +6,8 @@ unit role Pokeapi::Role::DataSource;
 #| The implementation must return default values if possible. Returning an undefined value is acceptable.
 method get-forms(:$species) returns Array { ... }
 
+method get-base-stats(:$species, :$form) returns Hash { ... }
+
 method get-gender-ratios(:$species, :$form) returns Hash { ... }
 
 method get-height(:$species, :$form) returns Hash { ... }

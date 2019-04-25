@@ -53,3 +53,7 @@ method get-weight(:$species, :$form) {
     my $weight = self.values-or-defaults(%weights, $form);
     return $weight;
 }
+
+method get-base-stats(:$species, :$form) {
+
+}
