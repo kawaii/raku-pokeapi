@@ -3,6 +3,9 @@ unit role Pokeapi::Role::DataSource;
 # Defines the methods we need to generate Pokemon.
 # Each implementation must return default values if possible. Returning an undefined value is sometimes acceptable.
 
+#| Returns the entire data set as a hash. Doesn't return related data such as evolutions.
+method get-pokemon(:$species, :$form = 'default') returns Hash { ... }
+
 #| Returns an array containing the names of all the species of Pokemon contained in the Pokedex.
 method get-species returns Array { ... }
 

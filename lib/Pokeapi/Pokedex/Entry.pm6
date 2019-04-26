@@ -1,0 +1,1 @@
+unit class Pokeapi::Pokedex::Entry;
