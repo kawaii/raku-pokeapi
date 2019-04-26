@@ -7,7 +7,7 @@ $$,
 $$
 {
     "default": {
-        "Male": 0.50, "Female": 0.50
+        "male": 0.50, "female": 0.50
    }
 }
 $$,
@@ -71,7 +71,7 @@ $$,
 $$
 {
     "default": {
-        "Male": 0.50, "Female": 0.50
+        "male": 0.50, "female": 0.50
    }
 }
 $$,
