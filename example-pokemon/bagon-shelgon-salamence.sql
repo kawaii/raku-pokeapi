@@ -58,7 +58,7 @@ $$
 }
 $$,
 '[ "Dragon" ]',
-10408
+'[10280, 10536]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (372, 'Shelgon', 'Endurance Pokémon','[ "default" ]',
@@ -121,7 +121,7 @@ $$
 }
 $$,
 '[ "Dragon" ]',
-10408
+'[10280, 10536]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (373, 'Salamence', 'Dragon Pokémon','[ "default", "mega" ]',
@@ -199,7 +199,7 @@ $$
 }
 $$,
 '[ "Dragon" ]',
-10408
+'[10280, 10536]'
 );
 
 INSERT INTO pokeapi_evolutions VALUES ('Bagon', 'Shelgon', 'default', '{"level": 30}');

@@ -58,7 +58,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (134, 'Vaporeon', 'Bubble Jet Pokémon','[ "default" ]',
@@ -121,7 +121,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (135, 'Jolteon', 'Lightning Pokémon','[ "default" ]',
@@ -184,7 +184,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (136, 'Flareon', 'Flame Pokémon','[ "default" ]',
@@ -247,7 +247,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (196, 'Espeon', 'Sun Pokémon','[ "default" ]',
@@ -310,7 +310,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (197, 'Umbreon', 'Moonlight Pokémon','[ "default" ]',
@@ -373,7 +373,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (470, 'Leafeon', 'Verdant Pokémon','[ "default" ]',
@@ -436,7 +436,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (471, 'Glaceon', 'Fresh Snow Pokémon','[ "default" ]',
@@ -499,7 +499,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (700, 'Sylveon', 'Intertwining Pokémon','[ "default" ]',
@@ -562,7 +562,7 @@ $$
 }
 $$,
 '[ "Field" ]',
-9123
+'[8995, 9251]'
 );
 
 INSERT INTO pokeapi_evolutions VALUES ('Eevee', 'Vaporeon', 'default', '{"stone": "Water Stone"}');

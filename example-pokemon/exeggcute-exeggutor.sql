@@ -58,7 +58,7 @@ $$
 }
 $$,
 '[ "Grass" ]',
-5268
+'[5140, 5396]'
 );
 
 INSERT INTO pokeapi_pokedex VALUES (103, 'Exeggutor', 'Coconut Pokémon','[ "default", "alolan" ]',
@@ -133,7 +133,7 @@ $$
 }
 $$,
 '[ "Grass" ]',
-5268
+'[5140, 5396]'
 );
 
 INSERT INTO pokeapi_evolutions VALUES ('Exeggcute', 'Exeggutor', 'default', '{"stone": "Leaf Stone"}');
