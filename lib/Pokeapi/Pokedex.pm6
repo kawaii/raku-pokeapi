@@ -13,9 +13,9 @@ method generate-random-pokemon returns Pokeapi::Pokemon {
     $entry.generate-random-pokemon;
 }
 
-method find-entry(:$species, :$form) returns Pokeapi::Pokedex::Entry {
-    my %pokey-hash = $.data-source.get-pokemon(:$species, :$form);
-    Pokeapi::Pokedex::Entry.new(|%pokey-hash);
+method find-entry(:$species) returns Pokeapi::Pokedex::Entry {
+    my %pokemon = $.data-source.get-pokemon(:$species);
+    Pokeapi::Pokedex::Entry.new(|%pokemon);
 }
 
 method evolve(Pokeapi::Pokemon :$pokemon) returns Pokeapi::Pokemon {

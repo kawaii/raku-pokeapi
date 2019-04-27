@@ -5,6 +5,17 @@ use Pokeapi::Controller::Database;
 
 use JSON::Fast;
 
+method get-pokemon(:$species) {
+    my $query = dbh.prepare(qq:to/STATEMENT/);
+               SELECT * FROM pokeapi_pokedex WHERE "species" = ?;
+        STATEMENT
+
+    $query.execute($species);
+
+    my %pokemon = from-json($query.row);
+    return %pokemon;
+}
+
 method get-species {
     my $query = dbh.prepare(qq:to/STATEMENT/);
            SELECT "species" FROM pokeapi_pokedex;
