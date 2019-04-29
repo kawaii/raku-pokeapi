@@ -34,12 +34,12 @@ method select-weight(:$species, :$form = 'default') {
     return $weight * (0.9..1.1).rand;
 }
 
-method get-base-stats(:$species, :$form = 'default') {
+method get-base-stats(:$species, :$form = 'default') returns Hash {
     my %base-stats = $.data-source.get-base-stats(:$species, :$form);
     return %base-stats;
 }
 
-method generate-ivs {
+method generate-ivs returns Hash {
     my %ivs = hp => (0..31).rand.Int,
               attack => (0..31).rand.Int,
               defence => (0..31).rand.Int,
@@ -51,7 +51,7 @@ method generate-ivs {
     return %ivs;
 }
 
-method generate-statistics(:$species, :$form = 'default', :$nature) {
+method generate-statistics(:$species, :$form = 'default', :$nature) returns Hash {
     my %stats = self.get-base-stats(:$species, :$form);
     %stats »+=« self.generate-ivs;
 
