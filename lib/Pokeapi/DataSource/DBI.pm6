@@ -13,7 +13,7 @@ method get-pokemon(:$species) {
     $query.execute($species);
 
     my %pokemon = $query.row(:hash);
-    for %pokemon<forms types gender-ratio height weight mega-stone color base-statistics abilities hidden-abilities regional-dex egg-groups>:v
+    for %pokemon<forms types gender-ratio height weight mega-stone pokedex-colours base-statistics abilities hidden-abilities regional-ids egg-groups>:v
         -> $v is rw { $v = from-json($v) if $v   }
 
     return %pokemon;
