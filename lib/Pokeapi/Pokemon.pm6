@@ -1,7 +1,5 @@
-unit class Pokeapi::Pokemon;
-
-has $.species;
-has $.form;
+use Pokeapi::Role::Pokemon;
+unit class Pokeapi::Pokemon  does Pokeapi::Role::Pokemon;
 
 method get-evolution-parameters(:$environment) {
     my %pokey-params = #self.Capture.Hash;
