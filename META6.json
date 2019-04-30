@@ -1,0 +1,11 @@
+{
+    "license": "BSD-3-Clause",
+    "repo-type": "git",
+    "source-url": "git://github.com/kawaii/p6-pokeapi.git",
+    "auth": "github:kawaii",
+    "name": "Pokeapi",
+    "description": "Perl 6 module providing various tools for sourcing and generating Pokemon data.",
+    "perl": "6.d",
+    "version": "0.0.1",
+    "authors": ["Kane 'kawaii' Valentine <kane@cute.im>"]
+}
