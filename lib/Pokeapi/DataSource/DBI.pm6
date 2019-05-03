@@ -66,6 +66,45 @@ method get-gender-ratios(:$species, :$form) {
     return %ratios;
 }
 
+method get-base-stats(:$species, :$form) {
+    my $query = dbh.prepare(qq:to/STATEMENT/);
+               SELECT "base-statistics" FROM pokeapi_pokedex WHERE species = ?;
+        STATEMENT
+
+    $query.execute($species);
+
+    my %base-stats = from-json($query.row);
+    %base-stats = self.values-or-defaults(%base-stats, $form);
+
+    return %base-stats;
+}
+
+method get-abilities(:$species, :$form) {
+    my $query = dbh.prepare(qq:to/STATEMENT/);
+           SELECT abilities FROM pokeapi_pokedex WHERE species = ?;
+        STATEMENT
+
+    $query.execute($species);
+
+    my %abilities = from-json($query.row);
+    %abilities = self.values-or-defaults(%abilities, $form);
+
+    return %abilities;
+}
+
+method get-hidden-abilities(:$species, :$form) {
+    my $query = dbh.prepare(qq:to/STATEMENT/);
+           SELECT "hidden-abilities" FROM pokeapi_pokedex WHERE species = ?;
+        STATEMENT
+
+    $query.execute($species);
+
+    my %hidden-abilities = from-json($query.row);
+    %hidden-abilities = self.values-or-defaults(%hidden-abilities, $form);
+
+    return %hidden-abilities;
+}
+
 method get-height(:$species, :$form) {
     my $query = dbh.prepare(qq:to/STATEMENT/);
            SELECT height FROM pokeapi_pokedex WHERE species = ?;
@@ -74,8 +113,8 @@ method get-height(:$species, :$form) {
     $query.execute($species);
 
     my %heights = from-json($query.row);
-
     my $height = self.values-or-defaults(%heights, $form);
+
     return $height;
 }
 
@@ -87,20 +126,18 @@ method get-weight(:$species, :$form) {
     $query.execute($species);
 
     my %weights = from-json($query.row);
-
     my $weight = self.values-or-defaults(%weights, $form);
+
     return $weight;
 }
 
-method get-base-stats(:$species, :$form) {
+method get-catch-rate(:$species) {
     my $query = dbh.prepare(qq:to/STATEMENT/);
-           SELECT "base-statistics" FROM pokeapi_pokedex WHERE species = ?;
+           SELECT "catch-rate" FROM pokeapi_pokedex WHERE species = ?;
         STATEMENT
 
     $query.execute($species);
 
-    my %base-stats = from-json($query.row);
-    %base-stats = self.values-or-defaults(%base-stats, $form);
-
-    return %base-stats;
+    my $catch-rate = $query.row;
+    return $catch-rate;
 }
